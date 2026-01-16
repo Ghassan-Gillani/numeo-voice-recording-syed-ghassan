@@ -1,0 +1,262 @@
+.app {
+  width: 100%;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Voice Recorder Styles */
+.voice-recorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #dc3545;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.connected {
+  background: #28a745;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.record-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  position: relative;
+}
+
+.record-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.record-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.record-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.record-button.recording {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.pulse-dot {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  animation: pulse-dot 1s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+.mic-icon {
+  font-size: 1.3rem;
+}
+
+.error-message {
+  padding: 12px 20px;
+  background: #fee;
+  color: #c33;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Translation List Styles */
+.translation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.translation-list.empty {
+  padding: 40px;
+  text-align: center;
+  color: #999;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.translation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.translation-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.clear-button {
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.clear-button:hover {
+  background: #e9ecef;
+  color: #333;
+}
+
+.translations {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.translation-item {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: all 0.2s ease;
+}
+
+.translation-item:hover {
+  background: #e9ecef;
+  transform: translateX(4px);
+}
+
+.original-text,
+.translated-text {
+  margin-bottom: 12px;
+}
+
+.original-text .label,
+.translated-text .label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.original-text p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.translated-text p {
+  font-size: 1.1rem;
+  color: #667eea;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #999;
+  text-align: right;
+  margin-top: 8px;
+}
+
+/* Scrollbar styling */
+.translations::-webkit-scrollbar {
+  width: 8px;
+}
+
+.translations::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.translations::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.translations::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
