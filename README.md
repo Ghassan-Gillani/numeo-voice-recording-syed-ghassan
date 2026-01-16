@@ -4,12 +4,12 @@ A full-stack application that records user voice input and translates each spoke
 
 ## Features
 
-- 🎤 **Voice Recording**: Uses Web Audio API and Speech Recognition API to capture and detect spoken sentences
-- 🔄 **Real-time Translation**: WebSocket-based communication for instant translation updates
-- 🎨 **Modern UI**: Clean, responsive interface with real-time status indicators
-- 📝 **Translation History**: View all translations with timestamps
-- ⚡ **State Management**: Zustand for efficient state management
-- 🛡️ **Error Handling**: Comprehensive error handling and user feedback
+-  **Voice Recording**: Uses Web Audio API and Speech Recognition API to capture and detect spoken sentences
+-  **Real-time Translation**: WebSocket-based communication for instant translation updates
+-  **Modern UI**: Clean, responsive interface with real-time status indicators
+-  **Translation History**: View all translations with timestamps
+-  **State Management**: Zustand for efficient state management
+-  **Error Handling**: Comprehensive error handling and user feedback
 
 ## Tech Stack
 
@@ -174,10 +174,10 @@ async function translateText(text, targetLanguage = 'es') {
 
 ## Browser Compatibility
 
-- ✅ **Chrome/Edge**: Full support (Web Speech API)
-- ✅ **Safari**: Full support (Web Speech API)
-- ⚠️ **Firefox**: Limited support (may need polyfill or alternative)
-- ❌ **Older browsers**: Not supported
+-  **Chrome/Edge**: Full support (Web Speech API)
+-  **Safari**: Full support (Web Speech API)
+-  **Firefox**: Limited support (may need polyfill or alternative)
+-  **Older browsers**: Not supported
 
 ## Troubleshooting
 
